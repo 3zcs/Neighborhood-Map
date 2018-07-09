@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighborhood map</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/neighborhoodMap.css">
+</head>
+  <body>
+		 <div id="user-section">
+        <div id="floating-search">
+					<input data-bind="value: $root.userSearch" id="location" type="text" placeholder="location"/>
+          <input id="search" data-bind="click: $root.findNeighborhood" type="button" value="search">
+        </div>
+        
+        <div id="floating-box" data-bind = "foreach: locations ">
+          <p data-bind = "click: $parent.selectMarker, text: name"></p>
+      </div>
+    </div>
+		<div id="map-container"></div>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+		<script type="text/javascript" src="js/neighborhoodMap.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_MsKJFDBq1gE8gTD287Xh3QLfJuXVWUk&callback=initMap"></script>
+  </body>
+</html>

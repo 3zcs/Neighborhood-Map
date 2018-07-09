@@ -1,0 +1,49 @@
+html, body /*, and all other map parent selectors*/ {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+#map-container {
+  height:100%;
+  width:100%;
+  z-index: 1;
+}
+
+#floating-search{
+position: absolute;
+top: 42px;
+left: 10px;
+z-index: 2;
+}
+
+#floating-box{
+  position: absolute;
+  top: 82px;
+  left: 10px;
+  height: 350px;
+  width: 250px;
+  padding: 10px;
+  background-color: rgb(0,0,0,0.5);
+  z-index: 2;
+  overflow: auto;
+}
+
+p {
+  color: white;
+}
+
+hr{
+  color: gray;
+}
+
+#user-section{
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .floating-box{
+    height: 40vh;
+    width: 45vw;
+  }
+}
